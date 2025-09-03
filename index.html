@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div class="screen welcome-screen active">
+            <h1>Interactive Quiz Challenge</h1>
+            <p>Test your knowledge with this interactive quiz! You'll get instant feedback on your answers and see your score at the end. Are you ready to begin?</p>
+            
+            <div class="category-selector">
+                <label for="category">Select Quiz Category:</label>
+                <select id="category">
+                    <option value="general">General Knowledge</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                    <option value="geography">Geography</option>
+                </select>
+            </div>
+            
+            <button class="btn start-btn">Start Quiz</button>
+        </div>
+        
+        <!-- Quiz Screen -->
+        <div class="screen quiz-screen">
+            <h1>Quiz Time!</h1>
+            <div class="timer">Time: <span id="time">30</span>s</div>
+            <div class="progress">
+                <div class="progress-bar"></div>
+            </div>
+            <p class="question-number">Question 1 of 5</p>
+            <h2 class="question">What is the capital of France?</h2>
+            <ul class="options">
+                <li class="option"><span class="option-icon">A</span>London</li>
+                <li class="option"><span class="option-icon">B</span>Berlin</li>
+                <li class="option"><span class="option-icon">C</span>Paris</li>
+                <li class="option"><span class="option-icon">D</span>Madrid</li>
+            </ul>
+            <div class="feedback"></div>
+            <button class="btn next-btn">Next Question</button>
+        </div>
+        
+        <!-- Results Screen -->
+        <div class="screen results-screen">
+            <h1>Quiz Completed!</h1>
+            <p class="score-text">Your final score is</p>
+            <p class="score-value">0/5</p>
+            <p class="message">Thanks for taking the quiz! You can try again to improve your score.</p>
+            <button class="btn restart-btn">Restart Quiz</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
